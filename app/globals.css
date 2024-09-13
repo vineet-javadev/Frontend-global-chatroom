@@ -25,3 +25,21 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Hide the div on small devices */
+@media only screen and (max-width: 600px) {
+  .your-div-class {
+    display: none;
+  }
+}
+
+/* Increase the size on medium devices */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+  .your-div-class {
+    transform: scale(0.7);
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
+}
+}
