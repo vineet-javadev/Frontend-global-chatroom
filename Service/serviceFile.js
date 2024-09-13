@@ -1,25 +1,6 @@
 import SockJS from "sockjs-client";
 import { Stomp } from "@stomp/stompjs";
 
-const express = require('express');
-const cors = require("cors");
-const app = express();
-
-// Allow requests from the Vercel frontend
-app.use(
-  cors({
-    origin: "https://frontend-global-chatroom.vercel.app",
-  })
-);
-
-app.get("/server/info", (req, res) => {
-  res.json({ message: "This is the server info" });
-});
-
-app.listen(8080, () => {
-  console.log("Server running on port 8080");
-});
-
 let stompClient = null;
 
 const ChatService = {
